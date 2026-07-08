@@ -1,0 +1,254 @@
+/* ============================================================
+   强提醒助手 · 专业版 设计系统
+   主色 #1A8CFF 海洋蓝 / 辅色 #00D4AA 碧波绿 / 警告 #FF6B35 珊瑚橙
+   ============================================================ */
+
+* {
+    font-family: "微软雅黑", "Microsoft YaHei", "Segoe UI", sans-serif;
+    outline: none;
+}
+
+QMainWindow, QDialog {
+    background: #eef2f7;
+}
+
+QWidget {
+    font-size: 14px;
+    color: #2b3648;
+}
+
+/* ---------- 顶部品牌横幅 ---------- */
+#Banner {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                stop:0 #1A8CFF, stop:0.55 #1f9cf0, stop:1 #00C2C7);
+    border-radius: 16px;
+}
+#BannerLogo {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 26px;
+    font-size: 26px;
+}
+#BannerTitle {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: bold;
+}
+#BannerSlogan {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 13px;
+}
+#VersionBadge {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 13px;
+    padding: 4px 14px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ---------- 内容卡片 ---------- */
+#ContentCard {
+    background: #ffffff;
+    border-radius: 16px;
+}
+
+/* ---------- Tab：胶囊风格 ---------- */
+QTabWidget::pane {
+    border: none;
+    background: transparent;
+    top: 4px;
+}
+QTabBar {
+    qproperty-drawBase: 0;
+}
+QTabBar::tab {
+    padding: 9px 26px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 9px;
+    background: #eef2f7;
+    color: #6b7785;
+    font-weight: bold;
+}
+QTabBar::tab:hover { background: #e2e9f2; }
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #1f9cf0, stop:1 #1A8CFF);
+    color: #ffffff;
+}
+
+/* ---------- 按钮体系 ---------- */
+QPushButton {
+    padding: 8px 18px;
+    border: 1px solid #d4dbe6;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #3a4759;
+    font-weight: 500;
+}
+QPushButton:hover { background: #f3f7fc; border-color: #1A8CFF; color: #1A8CFF; }
+QPushButton:pressed { background: #e7eef8; }
+QPushButton:disabled { color: #b6bfcc; border-color: #e6ebf2; background: #f7f9fc; }
+
+QPushButton#PrimaryBtn, QPushButton#DoneBtn {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #2f9bff, stop:1 #1A8CFF);
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+QPushButton#PrimaryBtn:hover, QPushButton#DoneBtn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #1f8cf5, stop:1 #1577da);
+    color: #ffffff;
+}
+QPushButton#PrimaryBtn:pressed, QPushButton#DoneBtn:pressed { background: #1268c4; }
+
+QPushButton#SnoozeBtn {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #19e0bb, stop:1 #00D4AA);
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+QPushButton#SnoozeBtn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #07cba2, stop:1 #00bd97);
+    color: #ffffff;
+}
+QPushButton#SnoozeBtn:pressed { background: #00a886; }
+
+QPushButton#DangerBtn {
+    color: #FF6B35;
+    border: 1px solid #ffb499;
+    background: #fff6f2;
+}
+QPushButton#DangerBtn:hover { background: #ffece4; border-color: #FF6B35; color: #FF6B35; }
+
+/* ---------- 输入控件 ---------- */
+QLineEdit, QPlainTextEdit, QComboBox, QSpinBox {
+    border: 1px solid #d4dbe6;
+    border-radius: 8px;
+    padding: 7px 10px;
+    background: #ffffff;
+    selection-background-color: #1A8CFF;
+    selection-color: #ffffff;
+}
+QLineEdit:hover, QPlainTextEdit:hover, QComboBox:hover, QSpinBox:hover {
+    border-color: #b7c4d6;
+}
+QLineEdit:focus, QPlainTextEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 1.5px solid #1A8CFF;
+    background: #fbfdff;
+}
+QComboBox::drop-down, QSpinBox::up-button, QSpinBox::down-button { border: none; width: 18px; }
+QComboBox QAbstractItemView {
+    border: 1px solid #d4dbe6;
+    border-radius: 8px;
+    background: #ffffff;
+    selection-background-color: #d9ecff;
+    selection-color: #1f2d3d;
+    padding: 4px;
+}
+
+/* ---------- 表格 ---------- */
+QTableWidget {
+    border: 1px solid #eaeef4;
+    border-radius: 12px;
+    gridline-color: #f0f3f8;
+    background: #ffffff;
+    alternate-background-color: #fafcfe;
+}
+QTableWidget::item { padding: 6px 8px; }
+QHeaderView::section {
+    background: #f5f8fc;
+    padding: 9px 8px;
+    border: none;
+    border-bottom: 2px solid #e6ebf2;
+    color: #6b7785;
+    font-weight: bold;
+}
+QHeaderView::section:first { border-top-left-radius: 12px; }
+QHeaderView::section:last { border-top-right-radius: 12px; }
+QTableWidget::item:selected { background: #d9ecff; color: #1f2d3d; }
+QTableWidget QTableCornerButton::section { background: #f5f8fc; border: none; }
+
+/* ---------- 复选框 ---------- */
+QCheckBox { spacing: 8px; }
+QCheckBox::indicator {
+    width: 18px; height: 18px;
+    border: 1.5px solid #c2ccdb;
+    border-radius: 5px;
+    background: #ffffff;
+}
+QCheckBox::indicator:hover { border-color: #1A8CFF; }
+QCheckBox::indicator:checked {
+    background: #1A8CFF;
+    border-color: #1A8CFF;
+    image: none;
+}
+
+/* ---------- 滚动条 ---------- */
+QScrollBar:vertical { background: transparent; width: 10px; margin: 2px; }
+QScrollBar::handle:vertical { background: #cfd8e3; border-radius: 5px; min-height: 30px; }
+QScrollBar::handle:vertical:hover { background: #aab6c6; }
+QScrollBar::add-line, QScrollBar::sub-line { height: 0; }
+QScrollBar:horizontal { background: transparent; height: 10px; margin: 2px; }
+QScrollBar::handle:horizontal { background: #cfd8e3; border-radius: 5px; min-width: 30px; }
+QScrollBar::handle:horizontal:hover { background: #aab6c6; }
+
+/* ---------- 页脚 ---------- */
+#Footer {
+    color: #9aa5b1;
+    font-size: 12px;
+}
+
+/* ---------- 设置页区块 ---------- */
+#SectionTitle {
+    color: #1A8CFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 4px;
+}
+#FieldHint { color: #9aa5b1; font-size: 12px; }
+
+/* ============================================================
+   强制提醒弹窗
+   ============================================================ */
+#ReminderDialog { background: #ffffff; }
+#ReminderAccent {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                stop:0 #1A8CFF, stop:1 #00C2C7);
+    border-top-left-radius: 4px; border-top-right-radius: 4px;
+}
+#ReminderIcon {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                stop:0 #1A8CFF, stop:1 #00C2C7);
+    border-radius: 24px;
+    font-size: 24px;
+}
+#ReminderTitle {
+    font-size: 19px;
+    font-weight: bold;
+    color: #1f2d3d;
+}
+#ReminderSubtitle { color: #9aa5b1; font-size: 12px; }
+#ReminderTask {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1A8CFF;
+}
+#ReminderMeta { color: #6b7785; font-size: 13px; }
+#ReminderDetail {
+    font-size: 15px;
+    color: #2b3648;
+    background: #f5f8fc;
+    border: 1px solid #e6ebf2;
+    border-left: 3px solid #1A8CFF;
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+#DelayLabel { color: #FF6B35; font-size: 13px; }
