@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="fr-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#191c27"/><stop offset="1" stop-color="#242a3c"/>
+    </linearGradient>
+    <linearGradient id="fr-bell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFD452"/><stop offset="1" stop-color="#FFA000"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="320" fill="url(#fr-bg)"/>
+  <!-- 背后的弹窗卡 -->
+  <g transform="translate(96,68)">
+    <rect x="34" y="26" width="216" height="150" rx="16" fill="#2b3346" stroke="#3d4864" stroke-width="2"/>
+    <rect x="34" y="26" width="216" height="34" rx="16" fill="#FF5252"/>
+    <rect x="34" y="44" width="216" height="16" fill="#FF5252"/>
+    <text x="52" y="49" font-size="15" font-weight="700" fill="#fff">提醒</text>
+    <rect x="56" y="80" width="120" height="9" rx="4.5" fill="#4a5674"/>
+    <rect x="56" y="100" width="160" height="9" rx="4.5" fill="#3d4864"/>
+    <rect x="150" y="134" width="82" height="28" rx="8" fill="#FFB300"/>
+    <text x="191" y="153" font-size="14" font-weight="700" fill="#1b1e2b" text-anchor="middle">已完成</text>
+  </g>
+  <!-- 前景铃铛 -->
+  <g transform="translate(150,86)">
+    <!-- 震动弧线 -->
+    <g stroke="#FFD452" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8">
+      <path d="M-18 20 Q-34 46 -18 72"/><path d="M110 20 Q126 46 110 72"/>
+      <path d="M-34 8 Q-60 46 -34 84" opacity="0.45"/><path d="M126 8 Q152 46 126 84" opacity="0.45"/>
+    </g>
+    <!-- 铃身 -->
+    <path d="M46 2 a10 10 0 0 1 0 0 M46 6 C24 8 14 30 14 54 C14 74 6 84 2 90 L90 90 C86 84 78 74 78 54 C78 30 68 8 46 6 Z" fill="url(#fr-bell)"/>
+    <rect x="40" y="-6" width="12" height="14" rx="6" fill="#FFA000"/>
+    <path d="M34 96 a12 12 0 0 0 24 0 Z" fill="#FFA000"/>
+    <!-- 红色感叹徽标 -->
+    <g transform="translate(78,6)">
+      <circle r="17" fill="#FF5252" stroke="#191c27" stroke-width="3"/>
+      <rect x="-2.5" y="-9" width="5" height="12" rx="2.5" fill="#fff"/><circle cx="0" cy="7" r="2.6" fill="#fff"/>
+    </g>
+  </g>
+  <!-- 文字 -->
+  <g transform="translate(370,0)">
+    <text x="0" y="138" font-size="60" font-weight="800" fill="#F4F6FF">强提醒助手</text>
+    <text x="4" y="180" font-size="23" fill="#C9D2EA">赖着不走的桌面周期提醒 · 到点强制弹窗，不点掉不消失</text>
+    <text x="4" y="212" font-size="18" fill="#8A94B4">A stubborn desktop reminder that won't go away until you act</text>
+    <g font-size="17" font-weight="600">
+      <rect x="4" y="234" width="140" height="34" rx="17" fill="#FFB300" opacity="0.16"/><text x="74" y="256" fill="#FFCE6A" text-anchor="middle">多模板并行</text>
+      <rect x="154" y="234" width="150" height="34" rx="17" fill="#FFB300" opacity="0.16"/><text x="229" y="256" fill="#FFCE6A" text-anchor="middle">绝对时间戳</text>
+      <rect x="314" y="234" width="158" height="34" rx="17" fill="#FF5252" opacity="0.16"/><text x="393" y="256" fill="#FF9E9E" text-anchor="middle">Win7 / 10 / 11</text>
+    </g>
+  </g>
+</svg>
