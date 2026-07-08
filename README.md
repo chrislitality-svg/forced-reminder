@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.svg" alt="forced-reminder banner" width="100%"></p>
+
 # 强提醒助手 · Forced Reminder
 
 > **一个「赖着不走」的桌面周期提醒工具 —— 到点强制弹窗，不点掉就不消失。**
